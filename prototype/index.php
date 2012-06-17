@@ -3,6 +3,8 @@
 <?php include("_head.php"); ?>
 <body>
 	<div id="add" class="container">
+		<a href="#" class="close">close</a>
+		
 		<header>
 			<h1>Add to CheckDesk</h1>
 			<a href="#" title="go to User Name's page on CheckDesk"><img src="#" alt="user-name"> User Name</a>
@@ -76,6 +78,8 @@
 	</div><!-- /#add -->
 	
 	<div id="discuss" class="container">
+		<a href="#" class="close">close</a>
+		
 		<header>
 			<h1>Added! Now Share!</h1>
 			<a href="#" title="go to User Name's page on CheckDesk"><img src="#" alt="user-name"> User Name</a>
