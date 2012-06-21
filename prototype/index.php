@@ -9,8 +9,8 @@
     <a href="#" class="close">close</a>
     
     <header>
-      <h1>Add to CheckDesk</h1>
-      <a href="#" title="go to User Name's page on CheckDesk"><img src="#" alt="user-name"> User Name</a>
+      <h1>Add to Checkdesk</h1>
+      <a href="#" title="go to User Name's page on Checkdesk"><img src="#" alt="user-name"> User Name</a>
     </header>
     
     <form>
@@ -85,13 +85,13 @@
     
     <header>
       <h1>Added! Now Share!</h1>
-      <a href="#" title="go to User Name's page on CheckDesk"><img src="#" alt="user-name"> User Name</a>
+      <a href="#" title="go to User Name's page on Checkdesk"><img src="#" alt="user-name"> User Name</a>
     </header>
     
     <form>
       
       <ul class"nav nav-tabs">
-        <li class="active"><a href="#on-checkdesk" data-toggle="tab">On Checkdesk</a></li>
+        <li class="active"><a href="#on-Checkdesk" data-toggle="tab">On Checkdesk</a></li>
         <li><a href="#on-fb" data-toggle="tab">On Facebook</a></li>
         <li><a href="#on-twitter" data-toggle="tab">On Twitter</a></li>
         <li class="dropable">
@@ -105,7 +105,7 @@
       </ul>
       
       <div class="tab-content">
-        <div id="on-checkdesk" class="tab-pane active">
+        <div id="on-Checkdesk" class="tab-pane active">
             
           <select id="choose-discussion">
             <option value="conv-new">Add new conversation</option>
@@ -128,7 +128,7 @@
                     <p>Bookmark excerpt</p>
                   </div>
                 </div>
-        </div><!-- /#on-checkdesk -->
+        </div><!-- /#on-Checkdesk -->
         
         <div class="tab-pane" id="on-fb">...</div>
         
