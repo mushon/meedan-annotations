@@ -1,8 +1,25 @@
-@import "bootstrap";
+// ====================
+// = Meedan bootstrap =
+// ====================
+// @import "meedan-bootstrap";
+
+// =====================
+// = Twitter bootstrap =
+// =====================
+// for reference, the original bootstrap-sass gem is in /reference
+// we're working with 
+@import "twitter-bootstrap";
 
 body {
-  background: red;
-  &:hover {
-    background: pink;
+  
+  header {
+  }
+  form {
+    .main {
+      .form-title {
+      }
+      .excerpt {
+      }
+    }
   }
 }
