@@ -13,13 +13,49 @@
 body {
   
   header {
+    background: #eee;
+    height: 100px;
   }
   form {
+    margin-bottom: 0;
     .main {
+      width: 90%;
+      margin: 5%;
+      >div{
+        margin-bottom: 5%;
+      }
       .form-title {
+        input{
+          width: 100%;
+          line-height: 20px;
+          font-size: 18px;
+          min-height: 35px;
+        }
+        padding-bottom: 10px;
+        border-bottom: 2px solid #eee;
       }
       .excerpt {
+        float: left;
+        width: 55%;
+        margin-right: 5%;
+      }
+      .img-excerpt{
+        float: left;
+        width: 30%;
+      }
+      .tags{
+        clear: both;
+        
+        input{
+          width: 100%;
+          height: 28px;
+        }
       }
     }
+   .submit{
+      background: #eee;
+      height: 60px;
+    }
+
   }
 }
