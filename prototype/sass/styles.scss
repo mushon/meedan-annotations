@@ -10,14 +10,51 @@
 // we're working with 
 @import "twitter-bootstrap";
 
+// Typography:
+@font-face{
+  font-family: "league gothic";
+  src: url('../webfonts/League_Gothic-webfont.eot');
+  src: url('../webfonts/League_Gothic-webfont.ttf') format('ttf');
+  src: url('../webfonts/League_Gothic-webfont.svg#League_Gothic-webfont') format('svg');
+  src: url('../webfonts/League_Gothic-webfont.woff') format('woff');
+}
+
+@mixin league-gothic {
+  font-family: "league gothic", sans;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
 body {
+  
+  .modal{
+    margin-top: -350px;
+  }
+  
+  button.close{
+    padding: 4px 5px;
+  }
   
   header {
     background: #eee;
-    height: 100px;
+    padding: 5%;
+    height: 30px;
+    h1{
+      @include league-gothic;
+      font-size: 3.5em;
+      float: left;
+    }
+    a{
+      float: left;
+      margin: -8px 10px 0 -10px;
+    }
   }
   form {
     margin-bottom: 0;
+    label{
+      // @include league-gothic;
+      // font-size: 1.5em;
+    }
     .main {
       width: 90%;
       margin: 5%;
@@ -36,12 +73,27 @@ body {
       }
       .excerpt {
         float: left;
-        width: 55%;
         margin-right: 5%;
+        width: 65%;
+        > textarea{
+          width: 100%;
+        }
       }
-      .img-excerpt{
+      .carousel{
         float: left;
+        margin-top: 1.8em;
         width: 30%;
+        ul{
+          margin: 0;
+        }
+        .prev,
+        .next{
+          position: relative;
+          top: auto;
+          width: auto;
+          display: inline;
+          left: 0;
+        }
       }
       .tags{
         clear: both;
@@ -51,10 +103,48 @@ body {
           height: 28px;
         }
       }
+      .custom-data{
+        .checkbox{
+          float: left;
+          width: 30%;
+          margin-right: 5%;
+        }
+        .extra-data{
+          //width: 100%;
+          clear: both;
+          border-top: 1px solid #ddd;
+          margin-top: 3em;
+          > label{
+            margin: -1em 0 1em;
+            background: #fff;
+            color: #888;
+            display: inline-block;
+            padding: 0 5px;
+            span {
+              font-size: 0.7em;
+            }
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
     }
    .submit{
       background: #eee;
-      height: 60px;
+      height: 45px;
+      padding: 15px 15px 0 0;
+      .multilevel {
+        float: right;
+        > .btn:last-child{
+        }
+        &:hover{
+          > .btn:last-child{
+            border-left: 0;
+            padding-left: 11px;
+          }
+        } 
+      }    
     }
 
   }
