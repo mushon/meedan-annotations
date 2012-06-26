@@ -38,15 +38,16 @@ body {
   header {
     background: #eee;
     padding: 5%;
-    height: 30px;
+    height: 35px;
     h1{
       @include league-gothic;
-      font-size: 3.5em;
+      font-size: 3.7em;
       float: left;
+      line-height: 0.9em;
     }
     a{
       float: left;
-      margin: -8px 10px 0 -10px;
+      margin-right: 10px;
     }
   }
   form {
@@ -132,17 +133,19 @@ body {
     }
    .submit{
       background: #eee;
-      height: 45px;
-      padding: 15px 15px 0 0;
+      height: 26px;
+      padding: 5%;
       .multilevel {
         float: right;
         > .btn:last-child{
         }
-        &:hover{
-          > .btn:last-child{
-            border-left: 0;
-            padding-left: 11px;
-          }
+        > .btn:last-child:hover{
+          @include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
+          border-left: 0;
+          padding-left: 11px;
+          text-shadow: 0;
+          background-color: auto;
+          background-position: 0 0;
         } 
       }    
     }
