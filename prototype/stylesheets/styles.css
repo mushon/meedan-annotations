@@ -3538,6 +3538,11 @@ body form {
       width: 100%; }
     body form .main .comment textarea {
       width: 100%; }
+    body form .main .url-excerpt img {
+      float: left;
+      margin-right: 10px;
+      width: 80px;
+      height: auto; }
   body form .submit {
     background: #eee;
     height: 26px;
@@ -3570,3 +3575,5 @@ body form {
             *background-color: #004ab3; }
           body form .submit .multilevel > .btn:last-child:hover:active, body form .submit .multilevel > .btn:last-child:hover.active {
             background-color: #004099 \9; }
+    body form .submit .share {
+      float: right; }

@@ -136,9 +136,16 @@ body {
       }
       
       .comment{
-        
         textarea{
           width: 100%;
+        }
+      }
+      .url-excerpt{
+        img{
+          float: left;
+          margin-right: 10px;
+          width: 80px;
+          height: auto;
         }
       }
     }
@@ -148,8 +155,6 @@ body {
       padding: 5%;
       .multilevel {
         float: right;
-        > .btn:last-child{
-        }
         &:hover .btn:first-child {
           background-color: $btnPrimaryBackgroundHighlight;
           background-position: 0 -15px;
@@ -163,7 +168,10 @@ body {
             padding-left: 1px;
           }
         } 
-      }    
+      }
+      .share{
+        float: right;
+      }
     }
 
   }
