@@ -70,7 +70,7 @@
         <div class="submit">
           <div class="btn-group multilevel">
             <button type="submit" class="btn btn-primary add">Add</button>
-            <button type="submit" class="btn btn-info discuss">&amp;&nbsp;&nbsp;&nbsp;Discuss</button>
+            <button id="btn-discuss" type="submit" class="btn btn-info discuss">&amp;&nbsp;&nbsp;&nbsp;Discuss</button>
           </div>
       </div>
     </form>
@@ -79,62 +79,64 @@
   <div id="discuss" class="hide">
     
     <header>
-      <h1>Added! Now Share!</h1>
-      <a href="#" title="go to User Name's page on Checkdesk"><img src="#" alt="user-name"> User Name</a>
+      <a href="#" title="go to User Name's page on Checkdesk"><img src="http://placehold.it/40x40" alt="user-name"></a>
+      <h1>Added, Now Share!</h1>
     </header>
     
     <form>
-      <ul class"nav nav-tabs">
-        <li class="active"><a href="#on-Checkdesk" data-toggle="tab">On Checkdesk</a></li>
-        <li><a href="#on-fb" data-toggle="tab">On Facebook</a></li>
-        <li><a href="#on-twitter" data-toggle="tab">On Twitter</a></li>
-        <li class="dropable">
-          <a href="#">Other</a>
-          <ul class="dropdown">
-            <li class=""><a href="#on-pinterest">On Pinterest</a></li>
-            <li class=""><a href="#on-delicious">On Delicious</a></li>
-            <li class=""><a href="#by-email">By email</a></li>
-          </ul>
-        </li>       
-      </ul>
-      
-      <div class="tab-content">
-        <div id="on-Checkdesk" class="tab-pane active">
-            
-          <select id="choose-discussion">
-            <option value="conv-new">Add new conversation</option>
-            <option value="conv-013">Conversation Title</option>
-            <option value="conv-012">Conversation Title</option>
-            …
-            <option value="conv-001">Conversation Title</option>
-          </select>
-
-            <div class="comment">
-              <label for="comment" class="control-label">Your Comment</label>
-              <textarea rows="3" placeholder="add your comment"></textarea>
-            </div>
-          
-          <div class="url-excerpt">
-            <img src="#" alt="extracted image">
-            <span class="verified">verified</span>
-            <div>
-              <h3>Bookmark title</h3>
-              <p>Bookmark excerpt</p>
-            </div>
-          </div>
-        </div><!-- /#on-Checkdesk -->
-        
-        <div class="tab-pane" id="on-fb">...</div>
-        
-        <div class="tab-pane" id="on-twitter">...</div>
-        
-        <div class="tab-pane" id="on-pinterest">...</div>
-        
-        <div class="tab-pane" id="on-delicious">...</div>
-        
-        <div class="tab-pane" id="by-email">...</div>
-      
-      </div><!-- /.tab-content -->
+    	<div class="main">
+	      <ul class="nav nav-pills">
+	        <li class="active"><a href="#on-Checkdesk" data-toggle="tab">On Checkdesk</a></li>
+	        <li><a href="#on-fb" data-toggle="tab">On Facebook</a></li>
+	        <li><a href="#on-twitter" data-toggle="tab">On Twitter</a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other <b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	            <li class=""><a href="#on-pinterest">On Pinterest</a></li>
+	            <li class=""><a href="#on-delicious">On Delicious</a></li>
+	            <li class=""><a href="#by-email">By email</a></li>
+	          </ul>
+	        </li>       
+	      </ul>
+	      
+	      <div class="tab-content">
+	        <div id="on-Checkdesk" class="tab-pane active">
+	            
+	          <select id="choose-discussion">
+	            <option value="conv-new">Add new conversation</option>
+	            <option value="conv-013">Conversation Title</option>
+	            <option value="conv-012">Conversation Title</option>
+	            …
+	            <option value="conv-001">Conversation Title</option>
+	          </select>
+	
+	            <div class="comment">
+	              <label for="comment" class="control-label">Your Comment</label>
+	              <textarea rows="3" placeholder="add your comment"></textarea>
+	            </div>
+	          
+	          <div class="url-excerpt">
+	            <img src="http://placehold.it/160x120" alt="extracted image">
+	            <span class="verified">verified</span>
+	            <div>
+	              <h3>Bookmark title</h3>
+	              <p>Bookmark excerpt</p>
+	            </div>
+	          </div>
+	        </div><!-- /#on-Checkdesk -->
+	        
+	        <div class="tab-pane" id="on-fb">...</div>
+	        
+	        <div class="tab-pane" id="on-twitter">...</div>
+	        
+	        <div class="tab-pane" id="on-pinterest">...</div>
+	        
+	        <div class="tab-pane" id="on-delicious">...</div>
+	        
+	        <div class="tab-pane" id="by-email">...</div>
+	      
+	      </div><!-- /.tab-content -->
+	    </div><!-- .main -->
           
       <div class="submit">
         <span class="uneditable-input shorturl">http://cd.sk/1234</span>
@@ -152,6 +154,9 @@
 <script src="js/bootstrap-modal.js"></script>
 <script src="js/bootstrap-collapse.js"></script>
 <script src="js/bootstrap-carousel.js"></script>
+<script src="js/bootstrap-tab.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap-typeahead.js"></script>
 <script src="js/bookmarklet.js"></script>
 </body>
 </html>

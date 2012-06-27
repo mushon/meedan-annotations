@@ -3459,7 +3459,8 @@ a.label:hover, a.badge:hover {
   src: url("../webfonts/League_Gothic-webfont.woff") format("woff"); }
 
 body .modal {
-  margin-top: -350px; }
+  margin-top: -350px;
+  position: absolute; }
 body button.close {
   padding: 4px 5px; }
 body header {
@@ -3533,6 +3534,10 @@ body form {
           font-size: 0.7em; }
         body form .main .custom-data .extra-data > label:hover {
           cursor: pointer; }
+    body form .main #choose-discussion {
+      width: 100%; }
+    body form .main .comment textarea {
+      width: 100%; }
   body form .submit {
     background: #eee;
     height: 26px;
