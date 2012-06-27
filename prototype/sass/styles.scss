@@ -139,13 +139,18 @@ body {
         float: right;
         > .btn:last-child{
         }
-        > .btn:last-child:hover{
-          @include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
-          border-left: 0;
-          padding-left: 11px;
-          text-shadow: 0;
-          background-color: auto;
-          background-position: 0 0;
+        &:hover .btn:first-child {
+          background-color: $btnPrimaryBackgroundHighlight;
+          background-position: 0 -15px;
+        }
+        
+        > .btn:last-child{
+          padding-left: 0px;
+          &:hover{
+            @include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
+            border-left: 0;
+            padding-left: 1px;
+          }
         } 
       }    
     }
