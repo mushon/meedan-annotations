@@ -2,8 +2,6 @@
 // ADD SCREEN //
 ////////////////
 
-
-
 //#btn-discuss
 $('#btn-discuss').click(function() {
 	$('#add').toggle();
@@ -16,7 +14,6 @@ $('#btn-discuss').click(function() {
 ////////////////
 
 //tabs
-
 $('#myTab a').click(function (e) {
 	e.preventDefault();
 	$(this).tab('show');
