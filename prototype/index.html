@@ -5,7 +5,7 @@
   </head>
   
 <body>
-<div class="modal">
+<div id="modal" class="modal">
   <button type="button" class="close" data-dismiss="modal">&#10006;</button>
   <div id="add" class="active">
     
@@ -71,7 +71,7 @@
           
         <div class="submit">
           <div class="btn-group multilevel">
-            <button type="submit" class="btn btn-primary add">Add</button>
+            <button id="btn-add" type="submit" class="btn btn-primary add out">Add</button>
             <button id="btn-discuss" type="submit" class="btn btn-info discuss">&amp;&nbsp;&nbsp;&nbsp;Discuss</button>
           </div>
       </div>
@@ -142,7 +142,7 @@
           
       <div class="submit">
         <code class="shorturl">http://cd.sk/1234</code>
-        <button type="submit" class="btn btn-primary share">Share</button>
+        <button type="submit" class="btn btn-primary share out">Share</button>
       </div>
     </form>
   </div><!-- /#discuss -->
