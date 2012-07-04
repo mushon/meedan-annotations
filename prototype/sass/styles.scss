@@ -22,6 +22,9 @@ body {
   .modal{
     position: absolute;
     top: -100%;
+    margin-top:0;
+    @include border-radius(0 0 6px 6px);
+    @include box-shadow(0 3px 20px rgba(0,0,0,0.7));
     //animation:
     -webkit-transition-duration: 1s;
     -moz-transition-duration: 1s;
@@ -29,13 +32,11 @@ body {
     transition-duration: 1s;
   
     &.onstage{
-      margin-top: -350px;
-      top: 50%;
+      top: 0;
     }
     
     &.slideout{
-      top: 100%;
-      margin-top: 0;
+      top: -100%;
     }
   
   }
@@ -50,137 +51,166 @@ body {
     height: 35px;
     h1{
       @include league-gothic;
-      font-size: 3.7em;
+      font-size: 2em;
       float: left;
-      line-height: 0.9em;
+      line-height: 1.7em;
+      width: 10%;
     }
-    a{
+    select{
+      @include league-gothic;
+      font-size: 2em;
       float: left;
-      margin-right: 10px;
+      height: 40px;
+      width: 90%;
     }
   }
-  form {
-    margin-bottom: 0;
-    label{
-      // @include league-gothic;
-      // font-size: 1.5em;
+  
+  form{
+    margin-bottom:0;
+  }
+
+  .conversation {
+    width: 90%;
+    margin: 5%;
+    >div{
+      margin-bottom: 5%;
     }
-    .main {
-      width: 90%;
-      margin: 5%;
-      >div{
-        margin-bottom: 5%;
-      }
-      .form-title {
-        input{
-          width: 100%;
-          line-height: 20px;
-          font-size: 18px;
-          min-height: 35px;
-        }
-        padding-bottom: 10px;
-        border-bottom: 2px solid #eee;
-      }
-      .excerpt {
-        float: left;
-        margin-right: 5%;
-        width: 65%;
-        > textarea{
-          width: 100%;
-        }
-      }
-      .carousel{
-        float: left;
-        margin-top: 1.8em;
-        width: 30%;
-        ul{
-          margin: 0;
-        }
-        .prev,
-        .next{
-          position: relative;
-          top: auto;
-          width: auto;
-          display: inline;
-          left: 0;
-        }
-      }
-      .tags{
-        clear: both;
-        
-        input{
-          width: 100%;
-          height: 28px;
-        }
-      }
-      .custom-data{
-        .checkbox{
+    
+    >ul{
+      margin: 0;
+     list-style: none;
+     li{
+        .profile-img{
           float: left;
-          width: 30%;
-          margin-right: 5%;
+          width: 8%; height: auto;
+          margin-right: 2%;
         }
-        .extra-data{
-          //width: 100%;
+        > p {
+          float: left;
+          width: 88%;
+          padding: 1%;
+          margin-bottom: 0;
+        }
+        > div {
           clear: both;
+          width: 88%;
+          margin: 2% 0 0 10%;
+          background: #f4f4f4;
           border-top: 1px solid #ddd;
-          margin-top: 3em;
-          > label{
-            margin: -1em 0 1em;
-            background: #fff;
-            color: #888;
-            display: inline-block;
-            padding: 0 5px;
-            span {
-              font-size: 0.7em;
+          border-bottom: 1px solid #ddd;
+          position: relative;
+          
+          > a.url-display{
+            display:block;
+            padding: 1%;
+            min-height: 60px;
+            
+            &:hover{
+              text-decoration: none;
+              background: #edfff1;
             }
-            &:hover {
+          }
+        
+          img{
+            float: left;
+            margin-right: 1%;
+          }
+          
+          strong, span{
+            display: block;
+          }
+          span{
+            color: #777;
+          }
+          .url-remove{
+            //width: 4px;
+            //height: 5px;
+            display: block;
+            position: absolute;
+            color: #aaa;
+            top: 0px;
+            right: 0px;
+            padding: 0 3px;
+            // top: -7px; right:-7px;
+            // background: #aaa;
+            // color: #fff;
+            // padding: 6px 4px;
+            // line-height: 0.2em;
+            // height: 4px;
+            // @include border-radius(14px);
+            
+            &:hover{
+              text-decoration: none;
+              //background: red;
+              color: red;
+              cursor: pointer;
+            }
+            
+            span{
+              display: none;
+            }
+          }
+          .url-edit{
+            width: 100%;
+            display: block;
+            position: absolute;
+            text-align: center;
+            bottom: -10px;
+            clear: both;
+            span{
+              background: #aaa;
+              color: #fff;
+              padding: 0px 12px 1px;
+              display: inline;
+              @include border-radius(10px);
+            }
+            &:hover{
+              text-decoration: none;
+              span{
+                background: #777;
+              }
               cursor: pointer;
             }
           }
         }
+        textarea{
+          width: 90%;
+          margin-bottom: -11px;
+        }
+        padding-bottom: 2%;
+        margin-bottom: 2%;
+        border-bottom: 1px #ccc dashed;
+        &:last-child{
+          border: 0;
+        }
       }
-      #choose-discussion{
-        width: 100%
+    }
+  }
+ .submit{
+    background: #eee;
+    height: 26px;
+    padding: 5%;
+    .btn{
+      float: right;
+    }
+    .multilevel {
+      float: right;
+      &:hover .btn:first-child {
+        background-color: $btnPrimaryBackgroundHighlight;
+        background-position: 0 -15px;
       }
       
-      .comment{
-        textarea{
-          width: 100%;
+      > .btn:last-child{
+        padding-left: 0px;
+        &:hover{
+          @include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
+          border-left: 0;
+          padding-left: 1px;
         }
-      }
-      .url-excerpt{
-        img{
-          float: left;
-          margin-right: 10px;
-          width: 80px;
-          height: auto;
-        }
-      }
+      } 
     }
-   .submit{
-      background: #eee;
-      height: 26px;
-      padding: 5%;
-      .multilevel {
-        float: right;
-        &:hover .btn:first-child {
-          background-color: $btnPrimaryBackgroundHighlight;
-          background-position: 0 -15px;
-        }
-        
-        > .btn:last-child{
-          padding-left: 0px;
-          &:hover{
-            @include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
-            border-left: 0;
-            padding-left: 1px;
-          }
-        } 
-      }
-      .share{
-        float: right;
-      }
+    .share{
+      float: right;
     }
-
   }
 }

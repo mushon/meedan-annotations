@@ -3464,16 +3464,21 @@ body {
   body .modal {
     position: absolute;
     top: -100%;
+    margin-top: 0;
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
+    -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.7);
     -webkit-transition-duration: 1s;
     -moz-transition-duration: 1s;
     -o-transition-duration: 1s;
     transition-duration: 1s; }
     body .modal.onstage {
-      margin-top: -350px;
-      top: 50%; }
+      top: 0; }
     body .modal.slideout {
-      top: 100%;
-      margin-top: 0; }
+      top: -100%; }
   body button.close {
     padding: 4px 5px; }
   body header {
@@ -3484,109 +3489,135 @@ body {
       font-family: "league gothic", sans;
       text-transform: uppercase;
       font-weight: normal;
-      font-size: 3.7em;
+      font-size: 2em;
       float: left;
-      line-height: 0.9em; }
-    body header a {
+      line-height: 1.7em;
+      width: 10%; }
+    body header select {
+      font-family: "league gothic", sans;
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 2em;
       float: left;
-      margin-right: 10px; }
+      height: 40px;
+      width: 90%; }
   body form {
     margin-bottom: 0; }
-    body form .main {
-      width: 90%;
-      margin: 5%; }
-      body form .main > div {
-        margin-bottom: 5%; }
-      body form .main .form-title {
-        padding-bottom: 10px;
-        border-bottom: 2px solid #eee; }
-        body form .main .form-title input {
-          width: 100%;
-          line-height: 20px;
-          font-size: 18px;
-          min-height: 35px; }
-      body form .main .excerpt {
-        float: left;
-        margin-right: 5%;
-        width: 65%; }
-        body form .main .excerpt > textarea {
-          width: 100%; }
-      body form .main .carousel {
-        float: left;
-        margin-top: 1.8em;
-        width: 30%; }
-        body form .main .carousel ul {
-          margin: 0; }
-        body form .main .carousel .prev,
-        body form .main .carousel .next {
-          position: relative;
-          top: auto;
-          width: auto;
-          display: inline;
-          left: 0; }
-      body form .main .tags {
-        clear: both; }
-        body form .main .tags input {
-          width: 100%;
-          height: 28px; }
-      body form .main .custom-data .checkbox {
-        float: left;
-        width: 30%;
-        margin-right: 5%; }
-      body form .main .custom-data .extra-data {
-        clear: both;
-        border-top: 1px solid #ddd;
-        margin-top: 3em; }
-        body form .main .custom-data .extra-data > label {
-          margin: -1em 0 1em;
-          background: #fff;
-          color: #888;
-          display: inline-block;
-          padding: 0 5px; }
-          body form .main .custom-data .extra-data > label span {
-            font-size: 0.7em; }
-          body form .main .custom-data .extra-data > label:hover {
-            cursor: pointer; }
-      body form .main #choose-discussion {
-        width: 100%; }
-      body form .main .comment textarea {
-        width: 100%; }
-      body form .main .url-excerpt img {
-        float: left;
-        margin-right: 10px;
-        width: 80px;
-        height: auto; }
-    body form .submit {
-      background: #eee;
-      height: 26px;
-      padding: 5%; }
-      body form .submit .multilevel {
-        float: right; }
-        body form .submit .multilevel:hover .btn:first-child {
-          background-color: #0055cc;
-          background-position: 0 -15px; }
-        body form .submit .multilevel > .btn:last-child {
-          padding-left: 0px; }
-          body form .submit .multilevel > .btn:last-child:hover {
-            background-color: #0073cc;
-            background-image: -moz-linear-gradient(top, #0088cc, #0055cc);
-            background-image: -ms-linear-gradient(top, #0088cc, #0055cc);
-            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0055cc));
-            background-image: -webkit-linear-gradient(top, #0088cc, #0055cc);
-            background-image: -o-linear-gradient(top, #0088cc, #0055cc);
-            background-image: linear-gradient(top, #0088cc, #0055cc);
-            background-repeat: repeat-x;
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='ie-hex-str(#0088cc)', endColorstr='ie-hex-str(#0055cc)', GradientType=0);
-            border-color: #0055cc #0055cc #003580;
-            border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-            *background-color: #0055cc;
-            filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-            border-left: 0;
-            padding-left: 1px; }
-            body form .submit .multilevel > .btn:last-child:hover:hover, body form .submit .multilevel > .btn:last-child:hover:active, body form .submit .multilevel > .btn:last-child:hover.active, body form .submit .multilevel > .btn:last-child:hover.disabled, body form .submit .multilevel > .btn:last-child:hover[disabled] {
-              background-color: #0055cc;
-              *background-color: #004ab3; }
-            body form .submit .multilevel > .btn:last-child:hover:active, body form .submit .multilevel > .btn:last-child:hover.active {
-              background-color: #004099 \9; }
-      body form .submit .share {
-        float: right; }
+  body .conversation {
+    width: 90%;
+    margin: 5%; }
+    body .conversation > div {
+      margin-bottom: 5%; }
+    body .conversation > ul {
+      margin: 0;
+      list-style: none; }
+      body .conversation > ul li {
+        padding-bottom: 2%;
+        margin-bottom: 2%;
+        border-bottom: 1px #ccc dashed; }
+        body .conversation > ul li .profile-img {
+          float: left;
+          width: 8%;
+          height: auto;
+          margin-right: 2%; }
+        body .conversation > ul li > p {
+          float: left;
+          width: 88%;
+          padding: 1%;
+          margin-bottom: 0; }
+        body .conversation > ul li > div {
+          clear: both;
+          width: 88%;
+          margin: 2% 0 0 10%;
+          background: #f4f4f4;
+          border-top: 1px solid #ddd;
+          border-bottom: 1px solid #ddd;
+          position: relative; }
+          body .conversation > ul li > div > a.url-display {
+            display: block;
+            padding: 1%;
+            min-height: 60px; }
+            body .conversation > ul li > div > a.url-display:hover {
+              text-decoration: none;
+              background: #edfff1; }
+          body .conversation > ul li > div img {
+            float: left;
+            margin-right: 1%; }
+          body .conversation > ul li > div strong, body .conversation > ul li > div span {
+            display: block; }
+          body .conversation > ul li > div span {
+            color: #777; }
+          body .conversation > ul li > div .url-remove {
+            display: block;
+            position: absolute;
+            color: #aaa;
+            top: 0px;
+            right: 0px;
+            padding: 0 3px; }
+            body .conversation > ul li > div .url-remove:hover {
+              text-decoration: none;
+              color: red;
+              cursor: pointer; }
+            body .conversation > ul li > div .url-remove span {
+              display: none; }
+          body .conversation > ul li > div .url-edit {
+            width: 100%;
+            display: block;
+            position: absolute;
+            text-align: center;
+            bottom: -10px;
+            clear: both; }
+            body .conversation > ul li > div .url-edit span {
+              background: #aaa;
+              color: #fff;
+              padding: 0px 12px 1px;
+              display: inline;
+              -webkit-border-radius: 10px;
+              -moz-border-radius: 10px;
+              border-radius: 10px; }
+            body .conversation > ul li > div .url-edit:hover {
+              text-decoration: none;
+              cursor: pointer; }
+              body .conversation > ul li > div .url-edit:hover span {
+                background: #777; }
+        body .conversation > ul li textarea {
+          width: 90%;
+          margin-bottom: -11px; }
+        body .conversation > ul li:last-child {
+          border: 0; }
+  body .submit {
+    background: #eee;
+    height: 26px;
+    padding: 5%; }
+    body .submit .btn {
+      float: right; }
+    body .submit .multilevel {
+      float: right; }
+      body .submit .multilevel:hover .btn:first-child {
+        background-color: #0055cc;
+        background-position: 0 -15px; }
+      body .submit .multilevel > .btn:last-child {
+        padding-left: 0px; }
+        body .submit .multilevel > .btn:last-child:hover {
+          background-color: #0073cc;
+          background-image: -moz-linear-gradient(top, #0088cc, #0055cc);
+          background-image: -ms-linear-gradient(top, #0088cc, #0055cc);
+          background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0055cc));
+          background-image: -webkit-linear-gradient(top, #0088cc, #0055cc);
+          background-image: -o-linear-gradient(top, #0088cc, #0055cc);
+          background-image: linear-gradient(top, #0088cc, #0055cc);
+          background-repeat: repeat-x;
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='ie-hex-str(#0088cc)', endColorstr='ie-hex-str(#0055cc)', GradientType=0);
+          border-color: #0055cc #0055cc #003580;
+          border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
+          *background-color: #0055cc;
+          filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+          border-left: 0;
+          padding-left: 1px; }
+          body .submit .multilevel > .btn:last-child:hover:hover, body .submit .multilevel > .btn:last-child:hover:active, body .submit .multilevel > .btn:last-child:hover.active, body .submit .multilevel > .btn:last-child:hover.disabled, body .submit .multilevel > .btn:last-child:hover[disabled] {
+            background-color: #0055cc;
+            *background-color: #004ab3; }
+          body .submit .multilevel > .btn:last-child:hover:active, body .submit .multilevel > .btn:last-child:hover.active {
+            background-color: #004099 \9; }
+    body .submit .share {
+      float: right; }
